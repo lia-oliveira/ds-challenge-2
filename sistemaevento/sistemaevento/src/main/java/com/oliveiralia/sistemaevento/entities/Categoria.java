@@ -18,6 +18,8 @@ public class Categoria {
 	@Column(columnDefinition = "TEXT")
 	private String descricao;
 	
+	
+	
 	public Categoria() {
 	}
 

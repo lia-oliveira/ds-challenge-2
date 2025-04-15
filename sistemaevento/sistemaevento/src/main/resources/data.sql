@@ -1,0 +1,5 @@
+INSERT INTO tb_categoria(descricao) VALUES ('Curso')
+INSERT INTO tb_categoria(descricao) VALUES ('Oficina')
+INSERT INTO tb_categoria(descricao) VALUES ('Workshop')
+INSERT INTO tb_categoria(descricao) VALUES ('Minicurso')
+INSERT INTO tb_categoria(descricao) VALUES ('Palestra')

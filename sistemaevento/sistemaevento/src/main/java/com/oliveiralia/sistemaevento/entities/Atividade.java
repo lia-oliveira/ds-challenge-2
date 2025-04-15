@@ -1,10 +1,16 @@
 package com.oliveiralia.sistemaevento.entities;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
+import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 
 @Entity
@@ -22,22 +28,23 @@ public class Atividade {
 	
 	private Double preco;
 	
+	@ManyToOne
+	@JoinColumn(name = "categoria_id")
+	private Categoria categoria;
+	
 	public Atividade() {
 	}
 
-	public Atividade(Integer id, String nome, String descricao, Double preco) {
+	public Atividade(Integer id, String nome, String descricao, Double preco, Categoria categoria) {
 		this.id = id;
 		this.nome = nome;
 		this.descricao = descricao;
 		this.preco = preco;
+		this.categoria = categoria;
 	}
 
 	public Integer getId() {
 		return id;
-	}
-
-	public void setId(Integer id) {
-		this.id = id;
 	}
 
 	public String getNome() {
@@ -56,11 +63,20 @@ public class Atividade {
 		this.descricao = descricao;
 	}
 
-	public Double getPrice() {
+	public Double getPreco() {
 		return preco;
 	}
 
-	public void setPrice(Double preco) {
+	public void setPreco(Double preco) {
 		this.preco = preco;
 	}
+	
+	public Categoria getCategoria() {
+		return categoria;
+	}
+
+	public void setCategoria(Categoria categoria) {
+		this.categoria = categoria;
+	}
+	
 }

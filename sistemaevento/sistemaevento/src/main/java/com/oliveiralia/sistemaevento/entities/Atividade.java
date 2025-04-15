@@ -20,16 +20,16 @@ public class Atividade {
 	@Column(columnDefinition = "TEXT")
 	private String descricao;
 	
-	private Double price;
+	private Double preco;
 	
 	public Atividade() {
 	}
 
-	public Atividade(Integer id, String nome, String descricao, Double price) {
+	public Atividade(Integer id, String nome, String descricao, Double preco) {
 		this.id = id;
 		this.nome = nome;
 		this.descricao = descricao;
-		this.price = price;
+		this.preco = preco;
 	}
 
 	public Integer getId() {
@@ -57,10 +57,10 @@ public class Atividade {
 	}
 
 	public Double getPrice() {
-		return price;
+		return preco;
 	}
 
-	public void setPrice(Double price) {
-		this.price = price;
+	public void setPrice(Double preco) {
+		this.preco = preco;
 	}
 }
